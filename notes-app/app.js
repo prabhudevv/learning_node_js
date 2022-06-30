@@ -1,6 +1,6 @@
 const validator = require("validator");
 const yargs = require("yargs");
-// const chalk = require('chalk');
+const chalk = require('chalk');
 const sumOfTwoNumbers = require("./utils.js");
 const notes = require("./notes.js");
 
@@ -9,32 +9,32 @@ const sum = sumOfTwoNumbers(2, 3);
 console.log(sum);
 
 // validator
-// console.log(chalk.bold.red.bgCyanBright('\n VALIDATOR '));
+console.log(chalk.bold.red.bgCyanBright('\n VALIDATOR '));
 console.log("Email validation: " + validator.isEmail("abc@gmail.com"));
 console.log(
   "URL validation: " + validator.isURL("https://nodejs.org/en/docs/")
 );
 
 // chalk colors
-// console.log(chalk.bold.red.bgCyanBright('\n CHALK COLORS '));
-// console.log(chalk.red('red'));
-// console.log(chalk.yellow('yellow'));
-// console.log(chalk.green('green'));
+console.log(chalk.bold.red.bgCyanBright('\n CHALK COLORS '));
+console.log(chalk.red('red'));
+console.log(chalk.yellow('yellow'));
+console.log(chalk.green('green'));
 
 // chalk background colors
-// console.log(chalk.bold.red.bgCyanBright('\n CHALK BACKGROUND COLORS '));
-// console.log(chalk.bgRed('bgRed'));
-// console.log(chalk.bgYellow('bgYellow'));
-// console.log(chalk.bgGreen('bgGreen'));
+console.log(chalk.bold.red.bgCyanBright('\n CHALK BACKGROUND COLORS '));
+console.log(chalk.bgRed('bgRed'));
+console.log(chalk.bgYellow('bgYellow'));
+console.log(chalk.bgGreen('bgGreen'));
 
 // chalk styles
-// console.log(chalk.bold.red.bgCyanBright('\n CHALK STYLES '));
-// console.log(chalk.bold('BOLD text'));
-// console.log(chalk.dim('DIM text'));
-// console.log(chalk.italic('ITALIC text'));
-// console.log(chalk.underline('UNDERLINE text'));
-// console.log(chalk.inverse('INVERSE text'));
-// console.log(chalk.strikethrough('STRIKETHROUGH text'));
+console.log(chalk.bold.red.bgCyanBright('\n CHALK STYLES '));
+console.log(chalk.bold('BOLD text'));
+console.log(chalk.dim('DIM text'));
+console.log(chalk.italic('ITALIC text'));
+console.log(chalk.underline('UNDERLINE text'));
+console.log(chalk.inverse('INVERSE text'));
+console.log(chalk.strikethrough('STRIKETHROUGH text'));
 
 const command = process.argv[2];
 if (command === "add") {
