@@ -1,8 +1,12 @@
 const fs = require("fs");
+const chalk = require('chalk');
 
+// debugger example cmd - node inspect app.js add --title="Hello" --body="World!"
 const addNote = (title, body) => {
   const notes = loadNotes();
   const duplicateNote = notes.find((note) => note.title === title);
+
+  debugger;
 
   if (!duplicateNote) {
     notes.push({
@@ -10,9 +14,9 @@ const addNote = (title, body) => {
       body: body,
     });
     saveNotes(notes);
-    console.log("New note added!");
+    console.log(chalk.green.inverse("New note added!"));
   } else {
-    console.log("Note already taken!");
+    console.log(chalk.red.inverse("Note already taken!"));
   }
 };
 
@@ -31,9 +35,9 @@ const readNote = (title) => {
 
   if (note) {
     console.log("Note found!");
-    console.log(note.title + " - " + note.body);
+    console.log(chalk.green.inverse(note.title + " - " + note.body));
   } else {
-    console.log("Note not found!");
+    console.log(chalk.red.inverse("Note not found!"));
   }
 };
 
@@ -48,10 +52,10 @@ const removeNote = (title) => {
     return note.title !== title;
   });
   if (notes.length > notesToKeep.length) {
-    console.log("Note removed!");
+    console.log(chalk.green.inverse("Note removed!"));
     saveNotes(notesToKeep);
   } else {
-    console.log("Note not removed!");
+    console.log(chalk.red.inverse("Note not removed!"));
   }
 };
 
