@@ -1,24 +1,45 @@
+body {
+  font-family: system-ui;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sub {
+  width: 50%;
+}
 h1 {
-  color: black;
-  background: #a19d9d;
-  padding: 15px;
-  text-align: center;
+  font-size: 50px;
+  margin: 10px 0;
 }
 img {
   width: 200px;
   height: auto;
 }
 footer {
-  text-align: center;
-  background: #979696;
-  padding: 10px;
-  font-size: 16px;
-}
-#header {
-  text-align: center;
+  font-size: 18px;
+  bottom: 0;
+  position: absolute;
+  border-top: 1px solid #a39f9f;
+  width: 50%;
 }
 a {
   text-decoration: none;
-  padding: 12px;
   font-size: 18px;
+  margin-right: 20px;
+  color: #646363;
+}
+button,
+input {
+  padding: 10px;
+}
+button {
+  background: #ded5d5;
+  border-color: #ded5d5;
+}
+#message-1,
+#message-2 {
+  font-size: 14px;
+  font-weight: 400;
 }
