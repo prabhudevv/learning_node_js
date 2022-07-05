@@ -1,5 +1,5 @@
 const fs = require("fs");
-const chalk = require('chalk');
+const chalk = require("chalk");
 
 // debugger example cmd - node inspect app.js add --title="Hello" --body="World!"
 const addNote = (title, body) => {
