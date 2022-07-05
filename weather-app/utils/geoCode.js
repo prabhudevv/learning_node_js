@@ -4,7 +4,7 @@ const geoCode = (address, callback) => {
   const url =
     "http://api.weatherstack.com/current?access_key=0a82bdc4c6628b5f968dd500d30a8857&query=" + address;
 
-  request({ url: url }, (error, response) => {
+  request({ url }, (error, response) => {
     if (error) {
       callback("Unable to connect to location services", undefined);
     } else if (JSON.parse(response.body).error) {

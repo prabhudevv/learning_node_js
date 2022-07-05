@@ -7,15 +7,14 @@ const foreCast = (latitude, longitude, callback) => {
     "," +
     longitude;
 
-  request({ url: url, json: true }, (error, response) => {
-    console.log(response.body.location);
+  request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to location services", undefined);
-    } else if (response.body.error) {
+    } else if (body.error) {
       callback("Unable to find location", undefined);
     } else {
       callback(undefined,
-        "Today's temperature in " + response.body.location.name + ", " + response.body.location.country + " is " + response.body.current.temperature + "°c, " + response.body.current.weather_descriptions + ", there is a " + response.body.current.precip + "% chance of rain"
+        "Today's temperature in " + body.location.name + ", " + body.location.country + " is " + body.current.temperature + "°c, " + body.current.weather_descriptions + ", there is a " + body.current.precip + "% chance of rain"
       );
     }
   });

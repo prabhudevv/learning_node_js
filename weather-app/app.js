@@ -7,11 +7,11 @@ const address = process.argv[2];
 if (!address) {
   console.log("Please provide address");
 } else {
-  geoCode(address, (error, data) => {
+  geoCode(address, (error, { latitude, longitude }) => {
     if (error) {
       return console.log("Error", error);
     } else {
-      foreCast(data.latitude, data.longitude, (error, data) => {
+      foreCast(latitude, longitude, (error, data) => {
         if (error) {
           console.log("Error", error);
         } else {
