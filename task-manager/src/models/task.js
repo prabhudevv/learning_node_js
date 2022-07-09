@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
-const taskSchema = mongoose.Schema({
+const taskSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
@@ -15,6 +15,8 @@ const taskSchema = mongoose.Schema({
     required: true,
     ref: 'User'
   }
+}, {
+  timestamps: true
 })
 
 taskSchema.pre('save', async function (next) {
@@ -27,15 +29,5 @@ taskSchema.pre('save', async function (next) {
 
 const Task = mongoose.model('Task', taskSchema);
 
-const me = new Task({
-  description: "Prepare coffee",
-  completed: true
-})
-
-me.save().then(() => {
-  console.log(me)
-}).catch((error) => {
-  console.log(error);
-})
 
 module.exports = Task
