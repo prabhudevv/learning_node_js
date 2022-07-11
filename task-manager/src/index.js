@@ -17,8 +17,7 @@ app.listen(port, () => {
 });
 
 const main = async () => {
-  const user = await User.findById('62c9991b6434d31364a569cf');
+  const user = await User.findById('62cbd9a9a00f5373017db965');
   await user.populate('tasks');
-  console.log(user.tasks);
 }
 main();
