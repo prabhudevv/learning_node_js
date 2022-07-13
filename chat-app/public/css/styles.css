@@ -1,0 +1,55 @@
+.sidebar {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #d4d4d4;
+}
+.body-text {
+  margin-left: 15%;
+  font-size: 18px;
+}
+.body-text,
+.chat__sidebar {
+  padding: 1rem;
+}
+p {
+  margin: 0;
+}
+.online {
+  padding: 4px;
+  margin-right: 5px;
+  color: #02a902;
+}
+.user-name {
+  margin: 4px 0px;
+  display: flex;
+}
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+.user-message {
+  font-size: 14px;
+  font-weight: 300;
+}
+.user-created-date {
+  font-size: 10px;
+  color: #b1adad;
+}
+.card {
+  margin: 5px 0px;
+}
+.card-body {
+  padding: 5px 10px !important;
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+}
+.message-section {
+  display: inline-flex;
+  bottom: 0;
+}
+#geo-location-link {
+  cursor: pointer;
+}
